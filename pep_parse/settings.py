@@ -7,7 +7,7 @@ BOT_NAME = 'pep_parse'
 
 PEP_DOMAIN = 'peps.python.org'
 ALLOWED_DOMAINS = [PEP_DOMAIN, ]
-URL = [f'https://{PEP_DOMAIN}/']
+URLS = [f'https://{PEP_DOMAIN}/']
 
 SPIDER_MODULES = ['pep_parse.spiders']
 
