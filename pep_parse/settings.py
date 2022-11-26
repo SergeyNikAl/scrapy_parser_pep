@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 BOT_NAME = 'pep_parse'
 
-ALLOWED_DOMAINS = ['peps.python.org',]
+ALLOWED_DOMAINS = ['peps.python.org', ]
 URL = ['https://peps.python.org/']
 
 SPIDER_MODULES = ['pep_parse.spiders']
