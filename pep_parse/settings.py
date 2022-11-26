@@ -22,5 +22,5 @@ FEEDS = {
 }
 
 ITEM_PIPELINES = {
-    'pep_parse.pipelines.PepParsePipeline': 300,
+    f'{BOT_NAME}.pipelines.PepParsePipeline': 300,
 }
