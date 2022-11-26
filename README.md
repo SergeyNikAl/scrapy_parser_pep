@@ -1,8 +1,12 @@
 # scrapy_parser_pep
 
-#Проект позволяет:
+**Проект позволяет**:
 
 Собирать актуальную информацию документации PEP с помощью фреймворка Scrapy
+
+**Используемые технологии**
+- [Python](https://www.python.org/) 3.10.7
+- [Scrapy](https://scrapy.org/) 2.5.1
 
 **Для работы с парсером**:
 >Скопировать проект командой: 
@@ -23,3 +27,5 @@ pip install -r requirements.txt
 ```bash
 scrapy crawl pep
 ```
+
+**Автор**: [Сергей Никулин](https://github.com/SergeyNikAl)
