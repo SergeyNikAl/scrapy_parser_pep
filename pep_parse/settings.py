@@ -1,18 +1,20 @@
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+RESULT_DIR = 'result'
 
 BOT_NAME = 'pep_parse'
 
-ALLOWED_DOMAINS = ['peps.python.org', ]
-URL = ['https://peps.python.org/']
+PEP_DOMAIN = 'peps.python.org'
+ALLOWED_DOMAINS = [PEP_DOMAIN, ]
+URL = [f'https://{PEP_DOMAIN}/']
 
 SPIDER_MODULES = ['pep_parse.spiders']
 
 ROBOTSTXT_OBEY = True
 
 FEEDS = {
-    'results/pep_%(time)s.csv': {
+    f'{RESULT_DIR}/pep_%(time)s.csv': {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
         'overwrite': True,
