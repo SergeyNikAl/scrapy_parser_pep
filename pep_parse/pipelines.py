@@ -12,6 +12,10 @@ FILE_NAME = 'status_summary_{datetime}.csv'
 
 class PepParsePipeline:
 
+    def __init__(self):
+        self.results_dir = BASE_DIR / RESULT_DIR
+        self.results_dir.mkdir(exist_ok=True)
+
     def open_spider(self, spider):
         self.status_count = defaultdict(int)
 
@@ -21,7 +25,7 @@ class PepParsePipeline:
 
     def close_spider(self, spider):
         with open(
-            BASE_DIR / RESULT_DIR / FILE_NAME.format(
+            self.results_dir / FILE_NAME.format(
                 datetime=dt.now().strftime(TIME_FORMAT)
             ),
             mode='w',
